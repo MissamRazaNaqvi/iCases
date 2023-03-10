@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'icon';
+    src: url('../fonts/icomoon.eot?4ilhhk');
+    src: url('../fonts/icomoon.eot?4ilhhk#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?4ilhhk') format('truetype'),
+        url('../fonts/icomoon.woff?4ilhhk') format('woff'),
+        url('../fonts/icomoon.svg?4ilhhk#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+
+span a {
+    text-decoration: none;
+    color: black;
+}
+
+.submit-btn {
+    padding: 12px;
+    background-color: #00AB2F;
+    color: white;
+    border-radius: 0px 2px 2px 0px;
+    border: 0px;
+    width: 270px;
+}
+
+.contact {
+    max-width: 1200px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+.formcss {
+    max-width: 600px;
+}
+
+.nameinput {
+
+    width: 100%;
+    position: relative;
+}
+
+.nameinput input {
+    width: 97%;
+    padding: 10px 0px;
+    padding-left: 10px;
+}
+
+/* input {
+    width: 100%;
+} */
+
+.subject {
+    width: 600px;
+}
+
+.subject-select {
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.number-input {
+    /* position: relative; */
+    display: flex;
+}
+
+.c-code {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    padding: 10px 10px;
+}
+
+.mail-input input {
+    width: 99%;
+    padding: 10px 0px;
+}
+
+.number-input input {
+    width: 530px;
+    padding: 10px 0px;
+}
+
+.massage-input textarea {
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.tel {
+    padding-left: 100px;
+
+}
+
+.help {
+    height: 302px;
+    width: 424px;
+    background-color: #00A9C7;
+    color: white;
+    margin: 87px 0px;
+    margin-left: 70px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+}
+
+.help-title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.hl {
+    color: rgb(122, 122, 122);
+    background-color: rgb(122, 122, 122);
+    border: 1px solid;
+    width: 420px;
+}
+
+.call {
+    position: relative;
+    padding: 20px 10px;
+}
+
+.call .icon-ic_call:before {
+    position: absolute;
+    content: "\e9be";
+    color: #00A9C7;
+    font-family: 'icon';
+    background-color: white;
+    border-radius: 50%;
+    padding: 20px;
+    left: 0;
+}
+
+.mail-help {
+    position: relative;
+    padding: 20px 10px;
+}
+
+.mail-help .icon-ic_email:before {
+    position: absolute;
+    content: "\e9bf";
+    color: #00A9C7;
+    font-family: 'icon';
+    background-color: white;
+    border-radius: 50%;
+    padding: 20px;
+    left: 0;
+}

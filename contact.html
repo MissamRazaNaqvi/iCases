@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./css/contact.css" />
+
+    <style>
+      .error {
+        color: red;
+      }
+      .inp-err {
+        border-color: red;
+      }
+
+      ._name {
+        color: red;
+      }
+      .star {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact">
+      <div class="form">
+        <form action="" class="formcss">
+          <h2>contact us</h2>
+          <span><a href="./index.html">Home</a></span>
+          <span><a href="./contact.html">Contact</a></span>
+          <div class="nameinput">
+            <div class="name">
+              <label for="name"> Name: <sup class="star">*</sup></label>
+            </div>
+            <div class="name-input">
+              <input type="text" id="username" />
+              <span class="_name" id="userspan"></span>
+            </div>
+          </div>
+          <div class="mailinput">
+            <div class="mail">
+              <label for="email"> Emai: <sup class="star">*</sup> </label>
+            </div>
+            <div class="mail-input">
+              <input type="email" class="error_border" name="mail" id="mail" />
+              <span class="_name" id="mailspan"></span>
+            </div>
+          </div>
+
+          <div class="number">
+            <label for="phone"> phone: <sup class="star">*</sup> </label>
+          </div>
+          <div class="number-input">
+            <select class="c-code" id="cc">
+              <option value="+91">+91</option>
+            </select>
+            <input type="number" class="phone" id="phonenumber" />
+          </div>
+          <span class="_name" id="phoneErr"></span>
+          <div class="message">
+            <label for="subject"> Message: <sup class="star">*</sup> </label>
+          </div>
+          <div class="massage-input">
+            <textarea id="message" name="address" rows="5" cols="50"></textarea>
+          </div>
+          <span class="_name" id="messagespan"></span>
+
+          <div class="subject">
+            <label for="subject"> Subject: <sup class="star">*</sup> </label>
+          </div>
+          <div class="subject-input">
+            <select class="subject-select" id="sub">
+              <option value="">--Please Select--</option>
+              <option value="Order Status">Order Status</option>
+              <option value="Return Request">Return Request</option>
+              <option value="Help Desk">Help Desk</option>
+            </select>
+            <span class="_name" id="subjectspan"></span>
+          </div>
+
+          <button onclick="validate(event)" class="submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      function validate(event) {
+        event.preventDefault();
+        var numbers = /^[0-9]+$/;
+        var mailformat =
+          /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        var phoneformat = /^[0-9]{10}$/g;
+
+        var username = document.getElementById("username").value;
+        var mail = document.getElementById("mail").value;
+        var phonenumber = document.getElementById("phonenumber").value;
+        var message = document.getElementById("message").value;
+        var subject = document.getElementById("sub").value;
+
+        // Validation for Name start
+        if (username == "" || username.trim() == "") {
+          // var userspan = document.getElementById("userspan").value;
+          userspan.innerHTML = "this is a required field";
+          document.getElementById("username").style.borderColor = "red";
+        } else if (username.match(numbers)) {
+          userspan.innerHTML = "number is not allow";
+          document.getElementById("username").style.borderColor = "red";
+        } else {
+          userspan.innerHTML = "";
+          document.getElementById("username").style.borderColor = "black";
+        }
+        // Validation for Name end
+
+        // start
+        if (mail == "") {
+          mailspan.innerHTML = "this is a required field";
+          document.getElementById("mail").style.borderColor = "red";
+        } else if (!mail.match(mailformat)) {
+          mailspan.innerHTML = "enter email in proper format ";
+        } else {
+          mailspan.innerHTML = "";
+          document.getElementById("mail").style.borderColor = "black";
+        }
+        //end
+
+        //start
+        if (phonenumber == "") {
+          phoneErr.innerHTML = "this is a required field";
+          document.getElementById("phonenumber").style.borderColor = "red";
+        } else if (!phonenumber.match(phoneformat)) {
+          phoneErr.innerHTML = "Only number 10 digit allow ";
+        } else {
+          phoneErr.innerHTML = "";
+          document.getElementById("phonenumber").style.borderColor = "black";
+        }
+        //end
+
+        //start
+        if (message == "") {
+          messagespan.innerHTML = "this is a required field";
+          document.getElementById("message").style.borderColor = "red";
+        } else {
+          messagespan.innerHTML = "";
+          document.getElementById("message").style.borderColor = "black";
+        }
+        //end
+
+        //start
+        if (subject == "") {
+          subjectspan.innerHTML = "this is a required field";
+
+          document.getElementById("sub").style.borderColor = "red";
+        } else {
+          subjectspan.innerHTML = "";
+          document.getElementById("sub").style.borderColor = "black";
+        }
+        //end
+      }
+    </script>
+  </body>
+</html>
